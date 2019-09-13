@@ -1,25 +1,28 @@
 # AWS Data Services Demonstrator - Initial Setup
 
-This series of articles demonstrate some of the AWS Data Services capabilities. AWS areas are covered as follows:
+This series of articles demonstrate some of the AWS Data Services capabilities. AWS areas covered as follows:
 * **AWS CLI** to interact with AWS services
 * **IAM** to set up users and assign policy documents to the users
 * **Terraform** for Infrastructure as a Code (IaaC)
 * **S3** buckets to store data
-* **Firehose** capability to process high velocity data streams
+* **Firehose** capability to process high throughput and low latency data streams
 * **Kinesis Data Gnerator** to produce random data to test Firehose
 * **Athena** to define schema and query data uploaded to S3
 * **Quicksight** to build dashboards against Athena
-* **Sagemaker** to set-up Jupyer Lab a data science workbench
-* **Python** to programatically interact with AWS using packages: botos, pandas, numpy
+* **Sagemaker** to set-up Jupyer Lab, a data science workbench
+* **Python** to programatically interact with AWS using packages such as: botos, pandas, numpy
 * **Redshift** creating datawaerhouse and loading data from the streams
-* **Lambda** transforming stream Lambda and Nodejs
+* **Lambda** transforming stream data using Lambda and Nodejs
 * **CI/CD** Combining terraform with Travis CI
 
 ## Section-1: AWS CLI
 
-AWS CLI allows to interact with AWS from a terminal window. In Jupyter Lab, aws cli can be invoked by setting the code cell to bash environment. In the example below we will create a user for this demo, create aws credential keys and assign policy to access resources.
+AWS CLI allows users to interact with AWS from a terminal window. In the example below we will:
+* create a user for this demo
+* create aws credential keys 
+* assign policy to access resources
 
-_**Pre-requisites**_: A user with IAM permissions created in AWS console and assigned to a credentials profile iam-admin
+_**Pre-requisites**_: A user with IAM permissions created in AWS console and assigned to a credentials profile, in the demo we use `iam-admin`
 
 **Objectives**
 * Create an admin user
@@ -27,7 +30,7 @@ _**Pre-requisites**_: A user with IAM permissions created in AWS console and ass
 * Create policy from a json document
 * Attach policy to user
 
-[Code](../terraform/setup/create_users.sh)
+[File for code](../terraform/setup/create_users.sh)
 
 **Create user**
 ```console
@@ -36,18 +39,18 @@ aws iam create-user --profile iam-admin \
                     --tags Key=project,Value=aws-fin-demo 
 ```
 
-**Create the keys** that would be used to access AWS. These are usually stored in ~/.aws/credentials file with a profile name
+**Create access keys** to access AWS. These are usually stored in ~/.aws/credentials file under a profile name
 
 ```console
-# create credentials
 aws iam create-access-key --profile iam-admin --user-name admin
 ```
 
-**Attach policies to access AWS resources. Below policy specifies**
+**Attach policies** to access AWS resources. Policy below specifies:
 
 * Grant EC2 related actions against all resources. Restrict to micro, small and medium instances
 * Grant S3, Sagemaker, Firehose and Athena access
-* Stored in policy.json
+* Stored in [policy.json](/terraform/setup/policy.json)
+
 ```json 
 {
     "Version": "2012-10-17",
@@ -108,15 +111,15 @@ aws iam create-access-key --profile iam-admin --user-name admin
     ]
 }
 ```
-_**Note:**_ Replace * (infront of role/firehose_role) with AWS account id
+_**Note:** Replace * (infront of role/firehose_role) with AWS account id_
 
-**Create the policy from json file**
+**Create policy from json file**
 
 ```console
 aws iam create-policy --profile iam-admin --policy-name admin-policy --policy-document file://../terraform/setup/policy.json
 ```
 
-The above command works from terminal window and not from jupyter. The output is as follows (some ids edited)
+The output is as follows (some ids edited)
 
 ```json
 {
@@ -137,7 +140,7 @@ The above command works from terminal window and not from jupyter. The output is
 
 **Query the policy arn to attach it to a specific user**
 ```console
-policy_arn=`aws iam list-policies --query "Policies[?PolicyName=='admin-policy'].Arn" --output text --profile iam-admin` && \
+policy_arn=`aws iam list-policies --query "Policies[?PolicyName=='admin-policy'].Arn" --output text --profile iam-admin` 
 aws iam attach-user-policy --policy-arn $policy_arn --user-name admin --profile iam-admin
 ```
 
@@ -147,7 +150,7 @@ aws iam attach-user-policy --policy-arn $policy_arn --user-name admin --profile 
 * Create s3 bucket for equity data
 * Create s3 bucket object to upload "aapl" and "ge" data
 
-[Code](../terraform/setup/main.tf)
+[Code File](/terraform/setup/main.tf)
 
 ```
 resource "aws_s3_bucket" "equity_bucket" {
@@ -189,8 +192,8 @@ aws s3 ls --profile admin
 Use python packages to process the equity data
 
 ### Related Notebooks
-* [00-Setup](./00_setup.ipynb) 
-* [01-Process S3 using python](./01_Process_s3_files.ipynb)
+* [00-Setup](/markdown/setup.md) 
+* [01-Process S3 using python](/jupyter-lab/process_s3_files.ipynb)
 * [02-Visualization and Analytics](./02_Visualization_and_Analytics.ipynb)
 * [03-Risk Analytics](./03_Risk_Analytics.ipynb)
 * [04-Exploring Firehose,Athena and Quicksight](./04_Exploring_Kinesis_Firehose.ipynb)
