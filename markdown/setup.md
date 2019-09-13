@@ -194,8 +194,8 @@ Use python packages to process the equity data
 ### Related Notebooks
 * [00-Setup](/markdown/setup.md) 
 * [01-Process S3 using python](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/process_s3_files.ipynb?flush_cache=true)
-* [02-Visualization and Analytics](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/Visualization_and_Analytics.ipynb?flush_cache=true)
-* [03-Risk Analytics](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/Risk_Analytics.ipynb?flush_cache=true)
+* [02-Visualization and Analytics](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/visualization_and_analytics.ipynb?flush_cache=true)
+* [03-Risk Analytics](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/risk_analytics.ipynb?flush_cache=true)
 * [04-Exploring Firehose,Athena and Quicksight](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/exploring_kinesis_firehose.ipynb?flush_cache=true)
 * [05-Athena and Quicksights](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/athena_quicksight.ipynb?flush_cache=true)
 * [06-Sagemaker to run the notebooks](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/sagemaker_jupyterlab.ipynb?flush_cache=true)
