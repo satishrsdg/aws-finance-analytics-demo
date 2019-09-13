@@ -16,4 +16,4 @@
 * [09_CI/CD Terrform with Travis CI](./09_Integrating_terraform_travisci.ipynb)
 
 ##Nbviewer
-* [00-Setup](https://nbviewer.jupyter.org//satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/00_setup.ipynb) 
+* [00-Setup](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/00_setup.ipynb) 
