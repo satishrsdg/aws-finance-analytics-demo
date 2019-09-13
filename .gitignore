@@ -1,0 +1,6 @@
+dump-work-on-later
+dump-work-on-later/*
+__pycache__
+sync-logs
+.terraform
+.ipynb_checkpoints
