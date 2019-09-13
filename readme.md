@@ -11,7 +11,7 @@
 
 * [03-Risk Analytics](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/risk_analytics.ipynb?flush_cache=true)
 
-* [04-Exploring Firehose,Athena and Quicksight](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/exploring_kinesis_firehose.md)
+* [04-Exploring Firehoset](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/exploring_kinesis_firehose.md)
 
 * [05-Athena and Quicksights](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/athena_quicksight.ipynb?flush_cache=true)
 
