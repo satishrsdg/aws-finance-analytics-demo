@@ -15,11 +15,12 @@ This section demonstrates AWS streaming using Kinesis Firehose which is a versio
 Services such as Kinesis Firehose work without human intervention. Yet, an identity is required to run theses servics. In AWS, roles (service principals) are the identities to run such applications. Roles are associated with policies granting relevant permissions to the roles
 
 **kinesis_role can be used to run three services: Firehose, Redshift and Glue**
+
 [Code File](/terraform/kinesis/01_iam_role.tf)
 
 Role and role policies use a different provider which is associated with an user who has `IAMFullAccesss` permissons.
 
-```json
+```
 resource "aws_iam_role" "kinesis_role" {
     name = "firehose_role"
     provider = "aws.iam"
@@ -51,7 +52,7 @@ resource "aws_iam_role" "kinesis_role" {
 
 [Code File](/terraform/kinesis/01_iam_role_policy.tf)
 
-```json
+```
 resource "aws_iam_role_policy" "kinesis_role_policy" {
     name = "kinesis_role_policy"
     provider = "aws.iam"
@@ -87,11 +88,11 @@ _**Note**:_ Policy makes reference to s3 bucket. Terraform deteremines the order
 
 ### Set-up S3 bucket to dump data from Kinesis Firehose streams
 
-[Code File](../terraform/kinesis/01_s3.tf)
+[Code File](/terraform/kinesis/01_s3.tf)
 
 **Bucket for unloading data from price stream**
 
-```json
+```
 resource "aws_s3_bucket" "price_bucket" {
   bucket        = "${var.bucket_name}-price-${var.region}"
   acl           = "private"
@@ -112,10 +113,10 @@ resource "aws_s3_bucket" "price_bucket" {
     Group       = var.resource_group
     }
 }
-
+```
 **Bucket for unloading data from transaction stream**
 
-```json
+```
 resource "aws_s3_bucket" "transaction_bucket" {
   bucket        = "${var.bucket_name}-transaction-${var.region}"
   acl           = "private"
@@ -140,7 +141,7 @@ resource "aws_s3_bucket" "transaction_bucket" {
 
 **Bucket for uploading data for reference data**
 
-```json
+```
 resource "aws_s3_bucket" "reference_bucket" {
   bucket        = "${var.bucket_name}-reference-${var.region}"
   acl           = "private"
@@ -164,7 +165,7 @@ resource "aws_s3_bucket" "reference_bucket" {
 ```
 
 **Bucket objects for copying data from local machine to S3 bucket**
-```json
+```
 locals {
   upload_directory = "${path.module}/data/"
 }
@@ -188,7 +189,7 @@ resource "aws_s3_bucket_object" "reference_data" {
 
 **Firehose stream for Price**
 
-```json
+```
 resource "aws_kinesis_firehose_delivery_stream" "price_hose" {
     name        = "price_hose"
     tags = {
@@ -207,7 +208,7 @@ resource "aws_kinesis_firehose_delivery_stream" "price_hose" {
 
 **Firehose stream for Transactions**
 
-```json
+```
 resource "aws_kinesis_firehose_delivery_stream" "transaction_hose" {
     name        = "transaction_hose"
     tags = {
