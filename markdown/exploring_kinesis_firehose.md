@@ -242,7 +242,7 @@ In another terminal run the this python code block
 The KDG extends faker.js, an open source random data generator. For full documentation of the items that can be "faked" by faker.js, see the [faker.js documentation.](https://github.com/Marak/faker.js/blob/master/Readme.md)
 
 ### Script for generating Price
-```json
+```
 {
     "instrument_id": {{random.number(50)}},
     "price": {{random.number(
@@ -257,7 +257,7 @@ The KDG extends faker.js, an open source random data generator. For full documen
 [KDG Screenshot - Price](./images/price_hose.png)
 
 ### Script for generating Transactions
-```json
+```
 {
     "book_id": {{random.number(
         {
