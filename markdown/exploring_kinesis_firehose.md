@@ -231,7 +231,7 @@ resource "aws_kinesis_firehose_delivery_stream" "transaction_hose" {
 * Use command line to put a dummy record to firehose
 * Display contents of  S3 files where FireHose has unloaded content
 
-[Refer Notebook](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-labexploring_kinesis_firehose.ipynb?flush_cache=true)
+[Refer Notebook](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/exploring_kinesis_firehose.ipynb?flush_cache=true)
 
 In another terminal run the this python code block
 
@@ -295,7 +295,7 @@ Let the KDG run for about 10 seconds.
 * Configure Price to run at 1000 records per second, choose the script to run against `price_hose` stream
 * Transactions to run at 100 records per second against `transaction_hose` stream
 
-[Refer Notebook](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-labexploring_kinesis_firehose.ipynb?flush_cache=true)
+[Refer Notebook](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/exploring_kinesis_firehose.ipynb?flush_cache=true)
 
 ## Next Steps
 * Configure the data to be loaded into AWS Athena

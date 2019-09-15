@@ -95,11 +95,17 @@ aws iam create-access-key --profile iam-admin --user-name admin
             "Action": "firehose:*",
             "Resource": "*"
         },
-                {
+        {
             "Effect": "Allow",
-            "Action": "Athena:*",
+            "Action": "athena:*",
             "Resource": "*"
         },
+        {
+            "Effect": "Allow",
+            "Action": "glue:*",
+            "Resource": "*"
+        },
+
         {
          "Effect": "Allow",
             "Action": [

@@ -1,7 +1,0 @@
-aws_profile  = "fin-demo"
-aws_iam_profile = "iam-admin"
-credentials_file    = "/home/sganesan/.aws/credentials"
-resource_group = "rg-financial-demo"
-bucket_name = "rsdg-fin-demo"
-region = "eu-west-2"
-code_bucket_name = "code-bucket"
