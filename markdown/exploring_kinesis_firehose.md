@@ -254,7 +254,7 @@ The KDG extends faker.js, an open source random data generator. For full documen
     "ts": "{{date.now}}"
 }
 ```
-[KDG Screenshot - Price](./images/price_hose.png)
+![KDG Screenshot - Price](./images/price_hose.png "Generating Price Data")
 
 ### Script for generating Transactions
 ```
@@ -287,7 +287,7 @@ The KDG extends faker.js, an open source random data generator. For full documen
     "ts": "{{date.now}}"
 }
 ```
-[KDG Screenshot - Transactions](./images/price_hose.png)
+![KDG Screenshot - Transactions](./images/price_hose.png "Generating Trade Data")
 
 ## Section-4: Testing the S3 buckets
 
