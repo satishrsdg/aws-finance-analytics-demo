@@ -226,4 +226,4 @@ from fin_demo.trade_json trade
 ![alt text](./images/quicksight_dashboard_2.png "Quickset Dashboard")
 
 ## Related Notebooks
-* [Setup](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/setup.md/markdown/setup.md) 
+* [Setup](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/setup.md) 
