@@ -303,4 +303,4 @@ Let the KDG run for about 10 seconds.
 
 
 ### Related Notebooks
-* [Setup](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/setup.md/markdown/setup.md) 
+* [Setup](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/setup.md) 
