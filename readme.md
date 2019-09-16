@@ -12,7 +12,7 @@
 
 * [04-Exploring Firehose](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/exploring_kinesis_firehose.md)
 
-* [05-Athena and Quicksights](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/athena_quicksight.ipynb?flush_cache=true)
+* [05-Athena and Quicksights](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/athena_quicksight.md)
 
 * [06-Sagemaker to run the notebooks](https://nbviewer.jupyter.org/github/satishrsdg/aws-finance-analytics-demo/blob/master/jupyter-lab/sagemaker_jupyterlab.ipynb?flush_cache=true)
 
