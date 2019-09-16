@@ -1,5 +1,19 @@
-# Readme
+# AWS Data Services Demonstrator - Initial Setup
 
+This series of articles demonstrate some of the AWS Data Services capabilities. AWS areas covered as follows:
+* **AWS CLI** to interact with AWS services
+* **IAM** to set up users and assign policy documents to the users
+* **Terraform** for Infrastructure as a Code (IaaC)
+* **S3** buckets to store data
+* **Firehose** capability to process high throughput and low latency data streams
+* **Kinesis Data Gnerator** to produce random data to test Firehose
+* **Athena** to define schema and query data uploaded to S3
+* **Quicksight** to build dashboards against Athena
+* **Sagemaker** to set-up Jupyer Lab, a data science workbench
+* **Python** to programatically interact with AWS using packages such as: botos, pandas, numpy
+* **Redshift** creating datawaerhouse and loading data from the streams
+* **Lambda** transforming stream data using Lambda and Nodejs
+* **CI/CD** Combining terraform with Travis CI
 
 ### Related Notebooks
 * [00-Setup](https://github.com/satishrsdg/aws-finance-analytics-demo/blob/master/markdown/setup.md) 
